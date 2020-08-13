@@ -2,6 +2,21 @@
   grid-area: n;
   background-color: rgb(255, 123, 134);
   padding: 20px;
+  color: white;
+  text-decoration: none;
+  }
+  
+  .nav img {
+    height: 60px;
+    display: grid;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .chiefs {
+    height: 60px;
+    margin: auto;
+    align-items: center; 
   }
 
   .item a {
@@ -11,4 +26,11 @@
 
   .item a.active {
     color: gold;
+  }
+
+  .friendlist {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+        
   }
