@@ -15,6 +15,8 @@ const Friendlist = (prop) => {
       <NavLink to='/chief/4' activeClassName={s.active}> Ann Petrovna </NavLink>
       <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
       <NavLink to='/chief/5' activeClassName={s.active}> Test text </NavLink>
+      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
+      <NavLink to='/chief/5' activeClassName={s.active}> Test text </NavLink>
      </div>
     </nav>
   )
