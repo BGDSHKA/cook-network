@@ -5,9 +5,22 @@ grid-template-columns: 2fr 10fr;
 
 .dialogsItems {
     padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: auto;
 }
 
-.dialogsItems .active {
+.dialogsItems img {
+    border-radius: 100px;
+    width: 40px;
+}
+.dialogsItems a {
+    color: rgb(226, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.dialogsItems a.active {
     color: gold;
 }
 

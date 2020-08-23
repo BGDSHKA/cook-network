@@ -1,22 +1,16 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import { NavLink, BrowserRouter } from 'react-router-dom';
+import DialogItem from '../Dialogs/DialogItem/DialogItem';
 
-const Friendlist = (prop) => {
+const Friendlist = (props) => {
+  let friendsElements = props.state.friends.map((f) => <><img src={f.photo}></img><DialogItem name={f.name} id={f.id} /></>);
+ 
   return (
     <nav className={s.nav}>
       <h3>Best chiefs</h3>
       <div className={s.item}>
-      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
-      <NavLink to='/chief/2' activeClassName={s.active}> Egor Dolganov </NavLink>
-      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
-      <NavLink to='/chief/3' activeClassName={s.active}> Pyotr Furniture </NavLink>
-      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
-      <NavLink to='/chief/4' activeClassName={s.active}> Ann Petrovna </NavLink>
-      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
-      <NavLink to='/chief/5' activeClassName={s.active}> Test text </NavLink>
-      <img src='https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg'></img>
-      <NavLink to='/chief/5' activeClassName={s.active}> Test text </NavLink>
+      {friendsElements}
      </div>
     </nav>
   )
