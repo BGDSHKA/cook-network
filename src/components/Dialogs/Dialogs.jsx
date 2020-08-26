@@ -3,10 +3,22 @@ import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 
+
 const Dialogs = (props) => {
 
     let dialogsElements = props.state.dialogs.map((dialog) => <><img src={dialog.photo}></img><DialogItem name={dialog.name} id={dialog.id} /></>);
     let messagesElements = props.state.messages.map(m => <Message message={m.message} />);
+
+    let newMessageElement = React.createRef();
+
+    let addMessage = () => {
+     props.addMessage();
+    }
+  
+    let onMessageChange = () => {
+      let text = newMessageElement.current.value;
+      props.updateNewMessageText(text);
+    }
 
     return (
         <div className={s.dialogs}>
@@ -17,10 +29,10 @@ const Dialogs = (props) => {
             <div className={s.messages}>
                 {messagesElements}
             <div>
-        <textarea></textarea>
+        <textarea ref={newMessageElement} onChange={onMessageChange} value={props.state.newMessageText} />
         </div>
         <div>
-        <button>Send</button>
+        <button onClick={addMessage}>Send</button>
         </div>
             </div>
             

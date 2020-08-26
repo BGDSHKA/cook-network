@@ -1,4 +1,7 @@
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () => {
+    console.log('State changed');
+}
+
 
 let state = {
     profilePage: {
@@ -10,7 +13,8 @@ let state = {
             { id: 4, message: 'asdasdasdasd', likesCount: 144 },
             { id: 5, message: 'fdsfsdf', likesCount: 15 },
             { id: 6, message: '123123123123', likesCount: 15 },
-        ]
+        ],
+        newPostText: ''
     },
     dialogPage: {
         messages: [
@@ -30,7 +34,8 @@ let state = {
             { id: 5, name: 'Egor', photo: 'https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg' },
             { id: 6, name: 'Sanjar', photo: 'https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg' },
         ],
-        
+        newMessageText: ''
+
     },
     sidebar: {
         friends: [
@@ -42,17 +47,44 @@ let state = {
     }
 
 }
- 
-export let addPost = (postMessage) => {
-    debugger;
+
+window.state = state;
+
+export const addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0,
     }
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export const addMessage = () => {
+    let newMessage = {
+        id: 7,
+        message: state.dialogPage.newMessageText,
+    }
+
+    state.dialogPage.messages.push(newMessage);
+    state.dialogPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+
+export const updateNewMessageText = (newText) => {
+    state.dialogPage.newMessageText = newText;
+    rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer; //observer pattern
 }
 
 export default state;
