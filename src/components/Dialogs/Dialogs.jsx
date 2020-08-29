@@ -9,15 +9,14 @@ const Dialogs = (props) => {
     let dialogsElements = props.state.dialogs.map((dialog) => <><img src={dialog.photo}></img><DialogItem name={dialog.name} id={dialog.id} /></>);
     let messagesElements = props.state.messages.map(m => <Message message={m.message} />);
 
-    let newMessageElement = React.createRef();
 
     let addMessage = () => {
-     props.dispatch(addMessageActionCreator());
+        props.dispatch(addMessageActionCreator());
     }
-  
-    let onMessageChange = () => {
-      let text = newMessageElement.current.value;
-      props.dispatch(updateNewMessageTextActionCreator(text));
+
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.dispatch(updateNewMessageTextActionCreator(text));
     }
 
     return (
@@ -28,14 +27,13 @@ const Dialogs = (props) => {
 
             <div className={s.messages}>
                 {messagesElements}
-            <div>
-        <textarea ref={newMessageElement} onChange={onMessageChange} value={props.state.newMessageText} />
-        </div>
-        <div>
-        <button onClick={addMessage}>Send</button>
-        </div>
+                <div>
+                    <textarea onChange={onMessageChange} value={props.state.newMessageText} />
+                </div>
+                <div>
+                    <button onClick={addMessage}>Send</button>
+                </div>
             </div>
-            
         </div>
     )
 }
