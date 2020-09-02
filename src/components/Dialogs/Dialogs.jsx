@@ -4,8 +4,8 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
-    let dialogsElements = props.dialogs.map((dialog) => <><img src={dialog.photo}></img><DialogItem name={dialog.name} id={dialog.id} /></>);
-    let messagesElements = props.messages.map(m => <Message message={m.message} />);
+    let dialogsElements = props.dialogPage.dialogs.map((dialog) => <><img src={dialog.photo}></img><DialogItem name={dialog.name} id={dialog.id} /></>);
+    let messagesElements = props.dialogPage.messages.map(m => <Message message={m.message} />);
 
 
     let onAddMessage = () => {
