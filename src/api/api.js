@@ -30,8 +30,14 @@ export const usersAPI = {
 
       getProfile(id) {
         return instance
-            .get(`Profile/${id}`)
+            .get(`profile/${id}`)
             .then(response => response.data);
+      },
+      
+      getStatus(id) {
+        return instance
+        .get(`profile/status/${id}`)
+        .then(response => response.data);
       }
       
 }
