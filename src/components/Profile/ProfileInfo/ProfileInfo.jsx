@@ -3,6 +3,7 @@ import Preloader from '../../../common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
 import userPhoto from '../../../assets/images/nophoto.png'
 import ProfileStatus from './ProfileStatus'
+import { usersAPI } from '../../../api/api';
 
 const ProfileInfo = (props) => {
 
@@ -19,7 +20,7 @@ const ProfileInfo = (props) => {
                {props.profile.photos.large 
                ? <img src={props.profile.photos.large} />
                : <img src={userPhoto} />} 
-                <ProfileStatus status={'hello my driends!'} />
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
                 <div>{props.profile.aboutMe}</div>
                 <div>vk: {props.profile.contacts.vk}</div>
                 {props.profile.lookingForAJob ? '✓ Ищу работу' : '× Не ищу работу'}
