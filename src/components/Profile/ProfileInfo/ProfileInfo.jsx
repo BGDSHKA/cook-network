@@ -3,7 +3,6 @@ import Preloader from '../../../common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
 import userPhoto from '../../../assets/images/nophoto.png'
 import ProfileStatus from './ProfileStatus'
-import { usersAPI } from '../../../api/api';
 
 const ProfileInfo = (props) => {
 
