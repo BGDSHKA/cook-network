@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
     messages: [
@@ -17,8 +16,7 @@ let initialState = {
         { id: 4, name: 'Larry', photo: 'https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg' },
         { id: 5, name: 'Egor', photo: 'https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg' },
         { id: 6, name: 'Sanjar', photo: 'https://www.sciencedebate2008.com/wp-content/uploads/chel.jpg' },
-    ],
-    newMessageText: ''
+    ]
 };
 
 const dialogReducer = (state = initialState, action) => {
@@ -27,29 +25,17 @@ const dialogReducer = (state = initialState, action) => {
         case ADD_MESSAGE:
             return {
                 ...state,
-                messages: [...state.messages, {id: 7, message: state.newMessageText}],
-                newMessageText: '',
+                messages: [...state.messages, {id: 7, message: action.newMessageText}]
             };
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText: action.newText        
-            }
         default:
             return state;
     }
 }
 
-export const addMessageActionCreator = () => {
+export const addMessageActionCreator = (newMessageBody) => {
     return {
-        type: ADD_MESSAGE
-    }
-}
-
-export const updateNewMessageTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_TEXT,
-        newText: text
+        type: ADD_MESSAGE,
+        newMessageText: newMessageBody
     }
 }
 
