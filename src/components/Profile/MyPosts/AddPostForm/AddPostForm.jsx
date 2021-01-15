@@ -7,6 +7,7 @@ const maxLength10 = maxLengthCreator(10);
 const Textarea = FormControl('textarea');
 
 const AddPostForm = (props) => {
+
   return (
     <form onSubmit={props.handleSubmit}>
       <div>
