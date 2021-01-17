@@ -4,7 +4,7 @@ import s from './MyPosts.module.css';
 import Post from './Post/Posts';
 
 const MyPosts = React.memo(props => {
-  console.log("render!!")
+
   let postsElements = props.posts
     .map(p => <Post message={p.message} likes={p.likesCount} />);
 
