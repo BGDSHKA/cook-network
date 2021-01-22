@@ -9,23 +9,30 @@ import style from "./../common/FormsControls/FormsControl.module.css"
 
 const Input = FormControl('input');
 
-const LoginForm = (props) => {
+const LoginForm = ({ handleSubmit, error }) => {
     return (
         <div>
-            <form onSubmit={props.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
-                    <Field validate={[required]} placeholder={"Email"} name={"email"} component={Input} />
+                    <Field validate={[required]}
+                        placeholder={"Email"}
+                        name={"email"}
+                        component={Input} />
                 </div>
                 <div>
-                    <Field validate={[required]} placeholder={"Password"}
-                        name={"password"} component={Input}
+                    <Field validate={[required]}
+                        placeholder={"Password"}
+                        name={"password"}
+                        component={Input}
                         type={"password"} />
                 </div>
                 <div>
-                    <Field type={"checkbox"} name={"rememberMe"} component={Input} /> remember me
+                    <Field type={"checkbox"} 
+                    name={"rememberMe"} 
+                    component={Input} /> remember me
                 </div>
-                {props.error && <div className={style.formSummaryError}>
-                    {props.error}
+                {error && <div className={style.formSummaryError}>
+                    {error}
                 </div>}
                 <div>
                     <button>Login</button>
@@ -35,7 +42,7 @@ const LoginForm = (props) => {
     )
 }
 
-const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
+const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
 
