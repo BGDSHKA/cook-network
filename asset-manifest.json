@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/cook-network/static/css/main.74227cb1.chunk.css",
+    "main.js": "/cook-network/static/js/main.76c85011.chunk.js",
+    "main.js.map": "/cook-network/static/js/main.76c85011.chunk.js.map",
+    "runtime-main.js": "/cook-network/static/js/runtime-main.94f38eb7.js",
+    "runtime-main.js.map": "/cook-network/static/js/runtime-main.94f38eb7.js.map",
+    "static/js/2.d63f34fa.chunk.js": "/cook-network/static/js/2.d63f34fa.chunk.js",
+    "static/js/2.d63f34fa.chunk.js.map": "/cook-network/static/js/2.d63f34fa.chunk.js.map",
+    "static/css/3.1a116b26.chunk.css": "/cook-network/static/css/3.1a116b26.chunk.css",
+    "static/js/3.4087818a.chunk.js": "/cook-network/static/js/3.4087818a.chunk.js",
+    "static/js/3.4087818a.chunk.js.map": "/cook-network/static/js/3.4087818a.chunk.js.map",
+    "static/js/4.e79732f0.chunk.js": "/cook-network/static/js/4.e79732f0.chunk.js",
+    "static/js/4.e79732f0.chunk.js.map": "/cook-network/static/js/4.e79732f0.chunk.js.map",
+    "index.html": "/cook-network/index.html",
+    "precache-manifest.9f399f2a088ff59403a7c3351260b0f9.js": "/cook-network/precache-manifest.9f399f2a088ff59403a7c3351260b0f9.js",
+    "service-worker.js": "/cook-network/service-worker.js",
+    "static/css/3.1a116b26.chunk.css.map": "/cook-network/static/css/3.1a116b26.chunk.css.map",
+    "static/css/main.74227cb1.chunk.css.map": "/cook-network/static/css/main.74227cb1.chunk.css.map",
+    "static/js/2.d63f34fa.chunk.js.LICENSE.txt": "/cook-network/static/js/2.d63f34fa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94f38eb7.js",
+    "static/js/2.d63f34fa.chunk.js",
+    "static/css/main.74227cb1.chunk.css",
+    "static/js/main.76c85011.chunk.js"
+  ]
+}
