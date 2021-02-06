@@ -4,10 +4,16 @@ import s from './ProfileInfo.module.css';
 import userPhoto from '../../../assets/images/nophoto.png'
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({isOwner, profile, status, updateStatus, savePhoto}) => {
 
     if (!profile) {
        return <Preloader />
+    }
+
+    const onMainPhotoSelected = (e) => {
+         if  (e.target.files.length) {
+             savePhoto(e.target.files[0])
+         }
     }
     
     return (
@@ -16,6 +22,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                {profile.photos.large 
                ? <img src={profile.photos.large} alt="" />
                : <img src={userPhoto} alt="" />} 
+               {isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
                 <div>{profile.aboutMe}</div>
                 <div>vk: {profile.contacts.vk}</div>
