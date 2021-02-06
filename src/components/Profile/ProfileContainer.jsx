@@ -8,16 +8,26 @@ import { compose } from 'redux';
 
 class ProfileContainer extends Component {
 
-    componentDidMount() {
-        let userId = this.props.match.params.userId;
+refreshProfile() {
+    let userId = this.props.match.params.userId;
+    if (!userId) {
+        userId = this.props.authorizedUserId;
         if (!userId) {
-            userId = this.props.authorizedUserId;
-            if (!userId) {
-                this.props.history.push("/login")
-            }
+            this.props.history.push("/login")
         }
-        this.props.getUserProfile(userId)
-        this.props.getStatus(userId)
+    }
+    this.props.getUserProfile(userId)
+    this.props.getStatus(userId)
+}
+
+    componentDidMount() {
+        this.refreshProfile()
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId) {
+        this.refreshProfile()
+        }
     }
 
     render() {
