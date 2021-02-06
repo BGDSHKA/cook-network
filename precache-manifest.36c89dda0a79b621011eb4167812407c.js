@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce106fb367a047d587360dd16f2880ea",
+    "revision": "6a8fb9c897b802e04787721a8eb72ae2",
     "url": "/cook-network/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cook-network/static/css/3.1a116b26.chunk.css"
   },
   {
-    "revision": "3e2a4733d160f5544cc0",
+    "revision": "39a00c7594f5f2c61076",
     "url": "/cook-network/static/css/main.74227cb1.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cook-network/static/js/4.e79732f0.chunk.js"
   },
   {
-    "revision": "3e2a4733d160f5544cc0",
-    "url": "/cook-network/static/js/main.76c85011.chunk.js"
+    "revision": "39a00c7594f5f2c61076",
+    "url": "/cook-network/static/js/main.1a2a3604.chunk.js"
   },
   {
     "revision": "758775c29514a8a8e6e4",
