@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a8fb9c897b802e04787721a8eb72ae2",
+    "revision": "25ec348702805eef72ba08ca0f83b221",
     "url": "/cook-network/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cook-network/static/css/3.1a116b26.chunk.css"
   },
   {
-    "revision": "39a00c7594f5f2c61076",
+    "revision": "fe886ab8a5ea1dd0d3a2",
     "url": "/cook-network/static/css/main.74227cb1.chunk.css"
   },
   {
-    "revision": "3a58fadf0d5c62bef153",
-    "url": "/cook-network/static/js/2.d63f34fa.chunk.js"
+    "revision": "c63a375424c2acb02bd2",
+    "url": "/cook-network/static/js/2.3cd27403.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/cook-network/static/js/2.d63f34fa.chunk.js.LICENSE.txt"
+    "url": "/cook-network/static/js/2.3cd27403.chunk.js.LICENSE.txt"
   },
   {
     "revision": "ef8ec7390d47784cdf80",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cook-network/static/js/4.e79732f0.chunk.js"
   },
   {
-    "revision": "39a00c7594f5f2c61076",
-    "url": "/cook-network/static/js/main.1a2a3604.chunk.js"
+    "revision": "fe886ab8a5ea1dd0d3a2",
+    "url": "/cook-network/static/js/main.47277243.chunk.js"
   },
   {
     "revision": "758775c29514a8a8e6e4",
