@@ -27,6 +27,10 @@ export const usersAPI = {
     console.warn("Obsolete method. Please profileAPI object.");
     return profileAPI.getProfile(id);
   },
+  
+  saveProfile(profile) {
+    return instance.put(`profile`, profile).then(response=> response.data)
+  }
 };
 
 export const profileAPI = {
