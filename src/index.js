@@ -12,12 +12,11 @@ import { Provider } from 'react-redux';
   ReactDOM.render(
     <React.StrictMode>
       {/* Для Github Pages сменили BrowserRouter с basename={process.env.PUBLIC_URL} -> HashRouter чтобы получить anchors, а не прямые ссылки (они не открываются правильно в GP)*/}
-      <HashRouter >
+      <BrowserRouter >
         <Provider store={store}>
-          <App state={store.getState()} 
-            dispatch={store.dispatch.bind(store)} />
+          <App state={store.getState()}  />
         </Provider>
-      </HashRouter>
+      </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
   );
